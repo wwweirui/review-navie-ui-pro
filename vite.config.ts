@@ -1,3 +1,4 @@
+import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 // Naive UI Pro 组件库的自动导入解析器，用于在 Vite 中自动导入和注册 Naive UI Pro 组件
 import { ProNaiveUIResolver } from 'pro-naive-ui-resolver'
@@ -18,4 +19,10 @@ export default defineConfig({
     // 配置 UnoCSS
     UnoCSS(),
   ],
+  resolve: {
+    // 配置别名，方便在项目中引用
+    alias: {
+      '@': `${path.resolve(__dirname, './src')}`,
+    },
+  },
 })

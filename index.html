@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>review navie UI Pro</title>
+    <!-- 避免应用根容器因内容过少（如仅显示一行文字）而无法铺满屏幕的问题，为页面布局（如侧边栏、全屏组件、垂直居中元素等）
+        提供完整的高度空间，是单页应用（SPA）实现全屏布局的基础配置。 -->
+      <style>
+        html,
+        body,
+        #app {
+          height: 100%
+        }
+      </style>
   </head>
   <body>
     <div id="app"></div>
